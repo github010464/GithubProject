@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+span{
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.8em;
+}
+
+.logo {
+    width: 6%;
+    height: auto;
+}
+
+.nav-link {
+    font-weight: 500;
+    /* text-transform: uppercase; */
+}
+video {
+    /* override other styles to make responsive */
+    width: 100%    !important;
+    height: auto   !important;
+ 
+ }
+ .jumbotron {
+     margin-bottom: 0px;
+     padding-left: 25px;
+     padding-right: 25px;
+     height: 600px;
+ }
+.footer {
+    text-align: center;
+    color: #f5f3f3;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    letter-spacing: 2px; 
+ }
+ .footer img {
+    width: 20px;
+ }
+ .footer p {
+    color: #fafafa;
+    padding-top: 20px; 
+    font-size: 0.9em;
+    letter-spacing: 2px; 
+ }
+
+ /* contact us */
+
+ body {
+    /* background-color: #9fc4fb; */
+    background-color: #9db6df;
+}
+
+.container-fluid {
+    background-color: #010449
+}
+
+.msg-form {
+    background-color: white;
+    padding: 20px
+}
+
+.pad-icon {
+    padding-top: 50px;
+    padding-left: 20px
+}
+
+.pad-icon a {
+    text-decoration: none;
+    margin-right: 40px
+}
+
+.input-group input:focus {
+    border: 1px solid blue
+    /* border: 1px solid orange; */
+}
+
+.pad-icon a:active {
+    height: 30px;
+    width: 30px;
+    background-color: #0080ff;
+    /* background-color: orange; */
+    border-radius: 100%
+}
+
+.links {
+    padding-top: 50px;
+    width: 50%
+}
+
+#bordering a:active {
+    border: 1px solid #0080ff
+}
+
+@media(min-width:568px) {
+    .container-fluid {
+        margin: 100px 25px;
+        width: 96%;
+        padding-top: 50px;
+        padding-bottom: 50px
+    }
+}
+
+@media(max-width:567px) {
+    .container-fluid {
+        margin: 10px 10px;
+        width: 94%;
+        padding-top: 20px;
+        padding-bottom: 20px
+    }
+
+    .pad {
+        padding-top: 20px
+    }
+}
+
