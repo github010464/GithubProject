@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flexbox Contact Form</title>
+</head>
+<body>
+    <div class="container">
+            <div class="header">
+                <h2>Contact Form - Using FormSubmit</h2>
+            </div>      
+            <span id="error_message"></span>       
+            <form action="https://formsubmit.co/8f3f9e505b4ca0530734574a4ff99410" id="myform" method="POST">
+           
+                <!-- ENABLE HONEYPOT -->
+                <input type="text" name="_honey" style="display: none">
+
+                <!-- DISABLE CAPTCHA -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-control">
+                    <div class="input-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="Firstname" id="fname" autofocus required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="Lastname" id="lname" required>
+                    </div>                    
+                </div>
+                <div class="form-control">
+                    <div class="input-group-2">
+                        <label for="email">Email</label>
+                        <input class="input-mail" type="text" name="Email" id="email" required>
+                    </div>
+                    <div class="input-group-3">
+                        <label for="phone">Phone</label>
+                        <input  class="input-phone" type="text" name="Phone" id="phone" required>
+                    </div>                 
+                </div> 
+                <div class="form-control-textarea">
+                    <label class="label-textarea" for="message">Message</label>             
+                    <textarea name="Message" id="message" rows="14" required></textarea>
+                </div>
+                 <input class="btn" type="submit" value="SEND">
+            </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
