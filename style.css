@@ -20,6 +20,18 @@ body{
     font-size: 18px;
     letter-spacing: 2px;
 }
+.header-success{
+    background-color: #eee;
+    width: 40%;
+    height:30%;
+    border-radius: 2px;
+    padding: 20px;
+    margin-top: -10%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+.header-success h1, h3, h4{
+    margin: 10px;
+}
 /* #error_message{
     padding: 0px;
     background-color: #ddd;
