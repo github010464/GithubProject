@@ -1,0 +1,297 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: monospace, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    /* overflow: scroll; */
+}
+nav{
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+}
+nav .logo{    
+    color: orange;
+    padding-left: 10px;
+}
+nav ul {
+    display: flex;
+}
+nav ul li{
+    padding-right: 10px;
+    /* border: 1px solid red; */
+}
+nav ul li a{
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    /* border: 1px solid green; */
+    padding: 10px 0;
+    display: block;
+}
+nav ul li a:hover{
+    color: orange;
+}
+.toggle-icon{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    width: 18px;
+    height: 2px;
+    margin: 4px auto;
+    background-color: #ccc;
+    display: block;
+}
+i{
+    font-size: 14px;
+}
+.show{
+    display: block;
+}
+section{
+    height: 100vh;
+    padding-top: 40px;
+}
+.home{
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 1)), url(/images/1199px-USAF_photographer.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ccc;  
+    letter-spacing: 10px;
+}
+.home-content{
+    width: 100%;
+    /* border: 1px solid red; */
+    margin:  0 30%;
+    line-height: 40px;
+    text-align: center;
+}
+.home-lightbox{
+    padding-left: 20px;
+}
+.home-content h2{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.home-content h1{
+    font-size: 50px;
+}
+.home-content .name{
+    color: orange;
+}
+.about{    
+    background-color: #333;
+    color: #ccc;
+    height: 100%;
+}
+.about-heading,
+.gallery-heading,
+.contact-heading{
+    padding-left: 44px;
+    padding-top: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.about-heading span,
+.gallery-heading span,
+.about-column span,
+.contact span{
+    color: orange;
+}
+.about-container{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 30px;
+    padding: 30px 40px;
+}
+.about-column{
+    /* border: 1px solid green; */
+    width: 50%;
+}
+.about-column img{
+    width: 100%;  
+    /* height: 100%;   */
+    height: auto;
+    border-radius: 10px;
+}
+.about-column h1{
+    font-size: 40px;
+    padding-bottom: 15px;
+    letter-spacing: 4px;
+}
+.about-column p{
+    letter-spacing: 2px;
+}
+.gallery{
+    /* border: 1px solid green; */
+    background-color: #111;
+}
+.gallery-heading{
+    color: #ccc;
+}
+.gallery-container{
+    /* border: 1px solid red; */
+    width: 90%;
+    display: flex;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+.gallery-container img{
+    /* width: 100%; */
+    padding: 5px;
+    border-radius: 10px;
+}
+.contact{
+    background-color: #222;
+}
+.contact-heading{
+    color: #ccc;    
+}
+.contact-container{
+    /* border: 1px solid red; */
+    width: 60%;
+    margin: 40px 20%;
+    display: flex;
+}
+.contact-container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;    
+    border-radius: 4px;
+    margin-bottom: 60px;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.contact-container h4{
+    padding: 10px;
+    text-align: center;
+    background-color: ccc;
+    font-size: 20px;
+}
+.contact-container input{
+    height: 30px;
+}
+.contact-container input, textarea{
+    padding-left: 10px;
+    width: 100%;
+    resize: none;
+    outline: 0;
+}
+.btn-container{
+    margin-left: 36%;
+    padding: 20px 0;
+}
+.btn-container button{
+    width: 100px;
+    padding: 4px 0;
+    border-radius: 4px;
+    border: 0;
+    outline: 0;    
+    cursor: pointer;
+    color: #fff;
+    background-color: #666;
+}
+.btn-container button:hover{
+    background-color: orange;
+    color: #fff;
+}
+@media(max-width: 1024px){
+    .toggle-icon{
+        display: block;
+    }
+    .toggle-icon.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .toggle-icon.active .bar:nth-child(1){
+        transform: translateY(6px) rotate(45deg);
+    }
+    .toggle-icon.active .bar:nth-child(3){
+        transform: translateY(-6px) rotate(-45deg);
+    }    
+    section{
+        padding-top: 50px;
+    }
+    nav ul{
+        position: absolute;
+        top: 42px;
+        flex-direction: column;
+        background-color: #111;
+        left: 1200px;
+        width: 100%;
+        -webkit-transition: 2s all ease;
+        transition: 2s all ease;
+        display: block;
+    }
+    nav ul li {
+        border-top: 1px solid #ccc;
+        padding-left: 20px;
+    }   
+    nav ul.active{
+        display: block;
+        left: 0;
+    }
+    .about-heading,
+    .gallery-heading{
+        padding-top: 0;
+    }
+    .about{
+        height: 100%;
+    }
+    .about-container{
+        flex-direction: column;    
+    }
+    .about-column{
+        width: 100%;
+    }
+    .about-column img{     
+        object-fit: cover;     
+    }
+    .gallery{
+        height: 100%;
+    }
+    .gallery-container{
+        margin-left: 54px;
+        padding-bottom: 20px;    
+        /* border: 1px solid green; */
+        /* display: flex; */
+    }
+    .image-gallery a{
+        /* display: block; */
+    }
+    .contact{
+        height: 100%;
+    }
+}
+@media(max-width: 768px){    
+    .gallery-container{
+        padding-left: 62px;    
+        /* border: 1px solid red; */
+    }
+    .contact-container{
+        /* border: 1px solid red; */
+        width: 90%;
+        margin: 40px 5%;
+    }
+    .contact-container button{
+        margin-left: 20px;
+    }
+}
