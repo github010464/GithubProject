@@ -68,7 +68,11 @@
         <div class="contact-container">
             <form id="my_form" action="https://formsubmit.co/8f3f9e505b4ca0530734574a4ff99410" target="_blank" method="POST">
 
-            <!-- <form onsubmit="sendEmail(); reset(); return false;"> -->
+                <!-- ENABLE HONEYPOT -->
+                <input type="text" name="_honey" style="display: none">
+
+                <!-- DISABLE CAPTCHA -->
+                <input type="hidden" name="_captcha" value="false">
 
                  <!-- ROUTE TO SUCCESS PAGE -->
                 <input type="hidden" name="_next" value="https://github010464.github.io/GithubProject/success.html">
