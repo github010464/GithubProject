@@ -306,13 +306,25 @@ section{
     }
 }
 @media(max-width: 414px){
-    /* .toggle-icon{
-        margin-right: 10px;
-    }
-    .gallery-container{
-        margin-left: 10px;
-    } */
     .btn-container{
         margin-left: 20px;
     }    
+}
+@media(max-width: 360px){
+    .btn-container{
+        margin-left: 0;
+        width: 100%;
+    }    
+    .home-content h1{
+        font-size: 30px;
+    }
+    .home-content h2{
+        font-size: 20px;
+    }
+    .gallery-container{
+        padding-left: 36px;
+    }
+    .image-gallery {
+        margin-left: 0;
+    }
 }
