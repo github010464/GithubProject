@@ -228,7 +228,7 @@ section{
         transform: translateY(-6px) rotate(-45deg);
     }    
     section{
-        padding-top: 50px;
+        /* padding-top: 50px; */
     }
     nav ul{
         position: absolute;
@@ -244,7 +244,10 @@ section{
     nav ul li {
         border-top: 1px solid #ccc;
         padding-left: 20px;
-    }   
+    }
+    nav ul li:nth-last-child(1) {        
+        border-bottom: 1px solid #ccc;
+    } 
     nav ul.active{
         display: block;
         left: 0;
@@ -270,13 +273,8 @@ section{
     }
     .gallery-container{
         margin-left: 54px;
-        padding-bottom: 20px;    
-        /* border: 1px solid green; */
-        /* display: flex; */
-    }
-    .image-gallery a{
-        /* display: block; */
-    }
+        padding-bottom: 20px; 
+    }    
     .contact{
         height: 100%;
     }
@@ -284,27 +282,36 @@ section{
 @media(max-width: 768px){    
     .gallery-container{
         padding-left: 62px;    
-        /* border: 1px solid red; */
     }
     .contact-container{
-        /* border: 1px solid red; */
         width: 90%;
         margin: 40px 5%;
     }
     .contact-container button{
         margin-left: 20px;
     }
+    .btn-container{
+        margin-left: 180px;
+    }
 }
-@media(max-width: 414px){
+@media(max-width: 516px){
     .toggle-icon{
         margin-right: 10px;
     }
-    .image-gallery{
-    }
-        
     .gallery-container{
         margin-left: 10px;
     }
+    .btn-container{
+        margin-left: 70px;
+    }
+}
+@media(max-width: 414px){
+    /* .toggle-icon{
+        margin-right: 10px;
+    }
+    .gallery-container{
+        margin-left: 10px;
+    } */
     .btn-container{
         margin-left: 20px;
     }    
