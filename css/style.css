@@ -66,7 +66,7 @@ section{
     padding-top: 40px;
 }
 .home{
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 1)), url(/images/1199px-USAF_photographer.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 1)), url(/images/bg.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     display: flex;
