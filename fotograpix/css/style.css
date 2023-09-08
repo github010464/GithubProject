@@ -51,7 +51,7 @@ i{
     font-size: 14px;
 }
 section{
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;  
     padding-top: 65px;  
 }
@@ -62,6 +62,7 @@ section:nth-child(odd){
     background-color: #333;
 }
 .home{
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +70,7 @@ section:nth-child(odd){
     color: #b1adad;    
     text-transform: uppercase;
     letter-spacing: 2px;
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 1)), url(../images/bg.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1)), url(/images/1199px-USAF_photographer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -101,6 +102,9 @@ section:nth-child(odd){
 .contact h1 span{
     color: orange;
 }
+.about{
+    height: 100%;
+}
 .about-wrapper{
     display: flex;
     width: 80%;
@@ -116,8 +120,7 @@ section:nth-child(odd){
     display: flex;
     height: auto;
     object-fit: cover;
-    border-radius: 6px;
-    
+    border-radius: 6px;    
 }
 .about-right{    
     color: #b1adad;
@@ -139,7 +142,7 @@ section:nth-child(odd){
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 40px 0 60px;
+    padding: 40px 0 40px;
 }
 .image-gallery img{
     padding: 10px;
@@ -150,102 +153,80 @@ section:nth-child(odd){
     filter: grayscale(0);
     transform: scale(1.1);
 }
+.contact{
+    height: 100%;
+    padding-bottom: 20px;
+}
 .contact_container{
-    width: 50%;
-    background-color: #eee;    
-    width: 100%;
+    width: 40%;
+    background-color: #eee;   
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    flex-direction: column;
     margin: 40px auto;
     border-radius: 4px;
     box-shadow: 0 2px 10px rgba(255, 255, 255, .7);
     position: relative;
+    margin-bottom: 100px;
 }
-form{        
-    width: 100%;
-    margin: 20px;
-    border-radius: 4px;
-}
-form h4{
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-form .input_control{
+.form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
 }
-form .input_control input{    
-    padding: 6px 0;
-    outline: none;
+.header h2{
+    text-transform: uppercase;
+    padding: 10px 0;
 }
-form textarea{
-    outline: none;
-    resize: none;
+.row{
+    display: flex;
+	flex-flow: wrap;
+	margin: 0 -15px;
+    /* border: 1px solid red; */
+    /* padding-bottom: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.btn-container{
-    margin-top: 20px;
+.column{
+    flex: 0 0 100%;
+    /* border: 1px solid green; */
+    /* padding: 0 20px 20px 20px; */
+    padding: 4px;
 }
-.btn-container button{
-    width: 100px;
-    padding: 8px 10px;
-    cursor: pointer;
-    outline: 0;
-    border: 0;
-    background-color: #555;
-    color: #fff;
+.column.email{
+    flex: 0 0 60%;
+}
+.column.phone{
+    flex: 0 0 40%;
+}
+.column input{
+    padding: 6px;
+}
+.column input, textarea{
+    width: 100%;
     border-radius: 3px;
 }
-.btn-container button:hover{
+.column textarea{
+    height: 150px;
+    resize: none;
+    padding: 6px;
+}
+.column input[type=submit]{
+    margin: 10px 0;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #555;
+    color: #fff;
+    padding: 10px 0;
+}
+.column input[type=submit]:hover{
     background-color: orange;
-}
-
-/* CSS POPUP */
-.popup_container{
-    width: 400px;
-    background-color: #fff;
-    margin: auto;
-}
-.popup{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    background-color: #eee;
-    top: 50%;
-    left: 50%;
-    width: 50%;   
-    transform: translate(-50%, -50%) scale(0.1);
-    border-radius: 4px; 
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, .7);
-    visibility: hidden;
-    transition: 0.4s, top 0.4s;    
-}
-.popup img{
-    width: 100px;
-    position: absolute;
-    top: -50px;
-}
-.popup_details{
-    margin-top: 50px;
-}
-.popup button{
-   padding: 4px 30px;
-   margin-top: 10px;
-   margin-bottom: 20px;
-   border-radius: 4px;
-   border: 0;
-   outline: 0;
-   box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
-   cursor: pointer;
-}
-.open_popup{
-    visibility: visible;
-    top: 50%;     
-    transform: translate(-50%, -50%) scale(1);
 }
 
 @media(max-width: 1024px){
@@ -267,6 +248,7 @@ form textarea{
 @media(max-width: 768px){
     .toggle-icon{
         display: block;
+        /* padding-right: 40px; */
     }
     .toggle-icon.active .bar:nth-child(2){
         opacity: 0;
@@ -282,10 +264,10 @@ form textarea{
         position: absolute;
         background-color: #222;
         left: 1200px;
-        top: 42px;
+        top: 52px;
         width: 100%;
-        -webkit-transition: 2s all ease;
-        transition: 2s all ease;
+        -webkit-transition: 1s all ease;
+        transition: 1s all ease;
     }
     .nav-item{
         border-top: 1px solid #ccc;
@@ -297,6 +279,7 @@ form textarea{
     .nav-link{
         display: block;
         width: 100%;
+        padding: 10px 0;
     }
    .nav-menu.active{
         display: block;
@@ -309,29 +292,30 @@ form textarea{
 
 @media(max-width: 540px){
     .toggle-icon{
-        padding-right: 10px;
+        /* padding-right: 10px; */
     }    
 }
 
 @media(max-width: 414px){
-    .toggle-icon{
-        padding-right: 20px;
-    }
-    .btn-container button{
+    
+    /* .btn-container button{
         width: 100px;
         margin: 10px 0;
+    } */
+    .column.email, .column.phone{
+        flex: 0 0 100%;
     }
-    form{
+    /* form{
         padding: 0 20px;
-    }
+    } */
 }
 
 @media(max-width: 360px){
     .btn-container{
         /* margin: 10px 0 10px 30px; */
     }
-    .btn-container button{    
+    /* .btn-container button{    
         display: block;
         font-size: 12px;
-    }
+    } */
 }
